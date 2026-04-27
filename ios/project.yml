@@ -1,0 +1,29 @@
+name: VoiceAssistant
+options:
+  bundleIdPrefix: com.ava
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  SWIFT_VERSION: "5.9"
+targets:
+  VoiceAssistant:
+    type: application
+    platform: iOS
+    sources:
+      - VoiceAssistant
+    info:
+      path: VoiceAssistant/Info.plist
+      properties:
+        UILaunchStoryboardName: LaunchScreen
+        NSMicrophoneUsageDescription: "Ava needs microphone access to hear your voice commands."
+        NSSpeechRecognitionUsageDescription: "Ava uses speech recognition to understand your commands."
+        LSApplicationQueriesSchemes:
+          - spotify
+          - music
+          - comgooglemaps
+          - maps
+          - youtubemusic
+          - amznmusic
+          - tidal
+          - deezer
+          - tel
